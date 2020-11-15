@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="style.css">
+		<script src="index.js"></script>
+		<title>"The Tower" Battle Simulator</title>
+		<div class="hero-image">
+			<div class="hero-text">
+				<h2><a href="#">TBS</a></h2>
+			</div>
+		</div>
+	</head>
+	<body>
+		<div id="main">
+			<div class="scroll_table">
+				<table>
+					<tr id="tr_even" style="font-size:14px;">
+						<th width="14%">Name</th>
+						<th width="14%">Heritage</th>
+						<th width="14%">Health</th>
+						<th width="14%">Attack</th>
+						<th width="14%">Speed</th>
+						<th width="14%">Shinsu</th>
+						<th width="6%"></th>
+					</tr>
+				</table>
+			</div>
+			<br>
+			<hr>
+			<p class="scroll">Hello.<br>
+				This is the TBS (Tower Battle Simulator); even though it's called TBS, it's more of a helper.<br>
+				With this helper, it should be easier to keep track of characters.<br>
+				It's meant for mastermind use as it relies on local storage.<br>
+			</p>
+			<div id="btn_row">
+				<div class="split">
+					<button type="button" onclick="openNew()">Add</button>
+					<button type="button" onclick="remove()">Delete</button>
+					<button type="button" onclick="openEdit()">Edit</button>
+					<button type="button" onclick="download()">Export</button>
+					<button type="button" onclick="upload()">Import</button>
+				</div>
+			</div>
+
+			<div class="form-popup" id="newForm">
+				<form class="form-container">
+					<h3 style="letter-spacing:4px;">New Character</h3>
+
+			    	<label for="name"><b>Name</b></label><br>
+			    	<input type="text" name="name" required><br>
+
+			    	<label for="family"><b>Heritage</b></label><br>
+			    	<input type="text" name="family" required><br>
+
+			    	<label for="hp"><b>Health</b></label><br>
+			    	<input type="number" name="hp" required><br>
+
+			    	<label for="atk"><b>Attack</b></label><br>
+			    	<input type="number" name="atk" required><br>
+
+			    	<label for="spd"><b>Speed</b></label><br>
+			    	<input type="number" name="spd" required><br>
+
+			    	<label for="shi"><b>Shinsu</b></label><br>
+			    	<input type="number" name="shi" required><br>
+
+				    <button type="button" onclick="createChar()">Submit</button>
+			    	<button type="button" onclick="closeForm()">Close</button>
+			  </form>
+			</div>
+
+			<div class="form-popup" id="editForm">
+				<form class="form-container">
+					<h3 style="letter-spacing:4px;">Edit Character</h3>
+
+			    	<label for="name"><b>Name</b></label><br>
+			    	<input type="text" name="name" required><br>
+
+			    	<label for="family"><b>Heritage</b></label><br>
+			    	<input type="text" name="family" required><br>
+
+			    	<label for="hp"><b>Health</b></label><br>
+			    	<input type="number" name="hp" required><br>
+
+			    	<label for="atk"><b>Attack</b></label><br>
+			    	<input type="number" name="atk" required><br>
+
+			    	<label for="spd"><b>Speed</b></label><br>
+			    	<input type="number" name="spd" required><br>
+
+			    	<label for="shi"><b>Shinsu</b></label><br>
+			    	<input type="number" name="shi" required><br>
+
+			    	<br><hr><br>
+			    	<label for="skill"><b>Inventory</b></label><br>
+			    	<div class="split">
+				    	<input type="text" placeholder="Name" name="item_name" style="width:265px;">
+				    	<input type="number" placeholder="Weight" name="weight" style="width:80px;">
+				    </div>
+				    <br>
+			    	<div class="split">
+			    		<input type="number" placeholder="HP" name="item_hp" style="width:45px;">
+			    		<input type="number" placeholder="ATK" name="item_atk" style="width:45px;">
+			    		<input type="number" placeholder="SPD" name="item_spd" style="width:45px;">
+			    		<input type="number" placeholder="REC" name="item_rec" style="width:45px;">
+			    	</div>
+			    	<br>
+			    	<input type="text" placeholder="Desc." name="item_desc"><br>
+			    	<button type="button" onclick="addItem()">Add Item</button><br>
+			    	<br><hr><br>
+
+			    	<label for="skill"><b>Skill</b></label><br>
+			    	<input type="text" placeholder="Name" name="skill_name"><br>
+			    	<div class="split">
+			    		<input type="text" placeholder="Type" name="type" style="width:200px;">
+			    		<input type="number" placeholder="Turn Cooldown" name="cooldown" style="width:145px;">
+			    	</div>
+			    	<br>
+			    	<input type="text" placeholder="Desc." name="skill_desc"><br>
+			    	<button type="button" onclick="addSkill()">Add Skill</button>
+
+			    	<br><br><hr><br>
+				    <button type="button" onclick="editChar()">Submit</button>
+			    	<button type="button" onclick="closeForm()">Close</button>
+			  </form>
+			</div>
+			<div id="music">
+			</div>
+		</div>
+
+		<div id="sim">
+
+		</div>
+	</body>
+</html>
