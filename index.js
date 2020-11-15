@@ -7,7 +7,7 @@ var rowCount = 0;
 
 
 function buildStr() {
-	var display = document.getElementsByTagName('p')[1];
+	var display = document.getElementsByTagName('p')[0];
 	var char;
 	for (var c = 0; c < chars.length; c++) {
 		if (chars[c] && chars[c].name === selected) {
